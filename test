@@ -1,0 +1,38 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #ccc;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting"></h1>
+  <script>
+    // Get the current time
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    // Set the greeting based on the current time
+    var greeting = "";
+    if (hours >= 6 && hours < 12) {
+      greeting = "おはようございます、 ナディア";
+    } else if (hours >= 12 && hours < 18) {
+      greeting = "こんにちは、ナディア";
+    } else if (hours >= 18 || hours < 6) {
+      greeting = "こんばんは、食事の時間です、ナディア。";
+    }
+
+    // Update the page with the greeting
+    var greetingElement = document.getElementById("greeting");
+    greetingElement.innerHTML = greeting;
+  </script>
+</body>
+</html>
